@@ -16,3 +16,13 @@
     flex-direction: column-reverse;
     padding: 20px;
 }
+
+.time-display {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #212529;
+}
+.feather {
+    margin-right: 8px;
+}

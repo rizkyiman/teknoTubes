@@ -35,7 +35,7 @@
               <a class="text-1000" href="https://wa.me/082141652080">
                 <span class="me-3">Contact </span>
               </a>
-              <a class="text-1000" href="profile.html">
+              <a class="text-1000" target="_blank" href="profile.html">
                 <span class="me-3">About Us</span>
               </a>
             </form>
@@ -426,7 +426,7 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="https://wa.me/082141652080">Contact Us</a></li>
                </ul>
             </div>
-            <div class="mapouter"><div class="osm_canvas"><iframe width="214" height="156" id="osm_canvas"  src="about:blank" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><script>document.getElementById('osm_canvas').contentDocument.write('<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />');document.getElementById('osm_canvas').contentDocument.write('<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>');document.getElementById('osm_canvas').contentDocument.write('<div id ="osm-map" style = "width:214px; height:156px;"></div>');document.getElementById('osm_canvas').contentDocument.write('<script>var mapOptions={center:[-7.9681831, 112.6581684],zoom:18,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([-7.9681831, 112.6581684]);marker.addTo(map).bindPopup(\'\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>');document.getElementById('osm_canvas').contentDocument.close();</script><a href="https://www.analarmclock.com/">online alarm clock</a><br><a href="https://online.stopwatch-timer.net/"></a><br><style>.mapouter{position: relative;text-align: right;height: 156px;width: 214px;}</style><a href="https://www.mapembed.net/openstreetmap">openstreetmap embed</a><style>.osm_canvas{overflow: hidden;background: none !important;height: 156px;width: 214px;}</style></div></div>
+            <div class="mapouter"><div class="osm_canvas"><iframe width="214" height="156" id="osm_canvas"  src="about:blank" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><script>document.getElementById('osm_canvas').contentDocument.write('<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />');document.getElementById('osm_canvas').contentDocument.write('<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>');document.getElementById('osm_canvas').contentDocument.write('<div id ="osm-map" style = "width:214px; height:156px;"></div>');document.getElementById('osm_canvas').contentDocument.write('<script>var mapOptions={center:[-7.910467204322605, 112.63601404338792],zoom:18,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([-7.910467204322605, 112.63601404338792]);marker.addTo(map).bindPopup(\'\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>');document.getElementById('osm_canvas').contentDocument.close();</script><a href="https://www.analarmclock.com/">online alarm clock</a><br><a href="https://online.stopwatch-timer.net/"></a><br><style>.mapouter{position: relative;text-align: right;height: 156px;width: 214px;}</style><a href="https://www.mapembed.net/openstreetmap">openstreetmap embed</a><style>.osm_canvas{overflow: hidden;background: none !important;height: 156px;width: 214px;}</style></div></div>
             <div class="col-sm-6 col-lg-auto ms-auto">
               <div class="row input-group-icon mb-5">
                 </div>
@@ -441,6 +441,23 @@
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg><span class="text-800">bberdendangria@gmail.com</span>
               </p>
+              <p class="text-800 time-display">
+                <svg class="feather feather-clock me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span id="timeDisplay" class="text-800"></span>
+            </p>
+            <script>
+              function updateTime() {
+                  const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                  const timeString = new Intl.DateTimeFormat('id-ID', options).format(new Date());
+                  document.getElementById('timeDisplay').textContent = timeString + ' WIB';
+              }
+          
+              setInterval(updateTime, 1000);
+              updateTime(); // Initial call to set time immediately
+          </script>
             </div>
           </div>
           <div class="border-bottom border-3"></div>
